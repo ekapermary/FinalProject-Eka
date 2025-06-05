@@ -20,6 +20,9 @@ public class PopUpSignUp extends BasePage {
     @FindBy(xpath = "//*[@id=\"signInModal\"]/div/div/div[3]/button[2]")
     WebElement signUpButton;
 
+    @FindBy(id = "login2")
+    WebElement linkSignUp;
+
     public void enterUsername(String username) {
         usernameField.sendKeys(username);
     }

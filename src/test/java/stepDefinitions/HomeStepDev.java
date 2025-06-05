@@ -9,18 +9,19 @@ import static org.junit.Assert.assertEquals;
 
 public class HomeStepDev {
     private final PopUpSignUp popUpSignUp  = new PopUpSignUp();
+    private final HomePage homePage = new HomePage();
 
     WebDriver driver;
 
     @Given("user on the home page")
     public void userOnTheHomePage() {
         HomePage homePage = new HomePage();
-        homePage.clickSignUpLink();
     }
 
     @When("user click Sign up button")
-    public void userClickSignUpButton() {
-       popUpSignUp.clickSignUpButton();
+    public void userClickSignUpButton() throws InterruptedException {
+        homePage.clickSignUpLink();
+        Thread.sleep(500);
     }
 
     @And("user input username {string}")
