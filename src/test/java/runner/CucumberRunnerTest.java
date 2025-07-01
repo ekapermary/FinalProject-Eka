@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/web/signup.feature"}
         //monochrome = true
 )
-public class CucumberRunner {
+public class CucumberRunnerTest {
     // Kelas ini akan menjalankan semua skenario yang ada di dalam file .feature
 }

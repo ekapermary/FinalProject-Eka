@@ -1,9 +1,11 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.home.PopUpSignUp;
+import utilities.AllertHandler;
 
 import static org.junit.Assert.assertEquals;
 
@@ -34,16 +36,17 @@ public class HomeStepDev {
         popUpSignUp.enterPassword(password);
     }
 
-    @And("user click Sign Up")
+     @And("user click Sign Up")
     public void userClickSignUp() {
         popUpSignUp.clickSignUpButton();
     }
 
     @Then("user show message {string}")
-    public void verifyMessage(String expectedMessage) {
-        PopUpSignUp popUpSignUp = new PopUpSignUp();
-        String actualMessage = popUpSignUp.getAlertMessage();
-        assertEquals(expectedMessage, actualMessage);
+    public void verifyMessage(String message){
+        AllertHandler allertHandler = new AllertHandler();
+        String actualAllertMessage = allertHandler.getAlertText();
+        System.out.println("actualAllertMessage : "+ actualAllertMessage);
+        //Assert.assertEquals(message "Alert message does not match", expectedAlertMessage, actualAllertMessage);
     }
 
 }

@@ -24,7 +24,7 @@ Feature: Product page cart
     Examples:
       | produk            | name  | country   | city    | card      | month | year |
       | Samsung galaxy s6 | Indah | Indonesia | Jakarta | 123456789 | 12    | 2025 |
-      | Sony xperia z5    | Raka  | Jepang    | Tokyo   | 987654321 | 11    | 2026 |
+      | Sony xperia z5    | Hana  | Jepang    | Tokyo   | 987654321 | 11    | 2026 |
 
 
   @valid-Remove
