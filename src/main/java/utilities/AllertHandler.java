@@ -12,13 +12,13 @@ public class AllertHandler {
     public String getAlertText() {
         waitAllert();
         String alertText = driver.switchTo().alert().getText();
+        driver.switchTo().alert().accept();
         return alertText;
     }
 
     public void waitAllert() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.alertIsPresent());
-        driver.switchTo().alert().accept();
     }
 
     public void acceptAlert() {
