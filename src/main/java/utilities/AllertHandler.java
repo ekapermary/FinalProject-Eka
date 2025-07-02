@@ -12,6 +12,7 @@ public class AllertHandler {
     public String getAlertText() {
         waitAllert();
         String alertText = driver.switchTo().alert().getText();
+        driver.switchTo().alert().accept();
         return alertText;
     }
 
