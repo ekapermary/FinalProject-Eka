@@ -18,7 +18,6 @@ public class AllertHandler {
     public void waitAllert() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.alertIsPresent());
-        driver.switchTo().alert().accept();
     }
 
     public void acceptAlert() {
